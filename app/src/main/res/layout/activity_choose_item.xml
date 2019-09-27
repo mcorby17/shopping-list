@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".ChooseItem">
+
+    <Button
+        android:id="@+id/carrotsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/carrots"
+        android:onClick="itemReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bananasButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/bananas"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toStartOf="@+id/Oreos"
+        app:layout_constraintStart_toEndOf="@+id/carrotsButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Oreos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/oreos"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/slab_o_ham"
+        android:onClick="itemReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carrotsButton" />
+
+    <Button
+        android:id="@+id/watermelonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/watermelon"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toStartOf="@+id/salsaButton"
+        app:layout_constraintStart_toEndOf="@+id/hamButton"
+        app:layout_constraintTop_toBottomOf="@+id/bananasButton" />
+
+    <Button
+        android:id="@+id/salsaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/salsa"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Oreos" />
+
+    <Button
+        android:id="@+id/eggsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/eggs"
+        android:onClick="itemReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hamButton" />
+
+    <Button
+        android:id="@+id/breadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/bread"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toStartOf="@+id/cheeseButton"
+        app:layout_constraintStart_toEndOf="@+id/eggsButton"
+        app:layout_constraintTop_toBottomOf="@+id/watermelonButton" />
+
+    <Button
+        android:id="@+id/cheeseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/cheese"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salsaButton" />
+
+    <Button
+        android:id="@+id/turkeyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/turkey"
+        android:onClick="itemReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggsButton" />
+
+    <Button
+        android:id="@+id/milkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/milk"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toStartOf="@+id/chipsButton"
+        app:layout_constraintStart_toEndOf="@+id/turkeyButton"
+        app:layout_constraintTop_toBottomOf="@+id/breadButton" />
+
+    <Button
+        android:id="@+id/chipsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/chips"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cheeseButton" />
+
+    <Button
+        android:id="@+id/peanutsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/peanuts"
+        android:onClick="itemReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turkeyButton" />
+
+    <Button
+        android:id="@+id/yogurtButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/yogurt"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toStartOf="@+id/beansButton"
+        app:layout_constraintStart_toEndOf="@+id/peanutsButton"
+        app:layout_constraintTop_toBottomOf="@+id/milkButton" />
+
+    <Button
+        android:id="@+id/beansButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/beans"
+        android:onClick="itemReply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipsButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

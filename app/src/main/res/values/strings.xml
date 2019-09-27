@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="main_list_button_text">Choose Item</string>
+    <string name="carrots">Carrots</string>
+    <string name="bananas">Bananas</string>
+    <string name="oreos">Oreos</string>
+    <string name="slab_o_ham">Slab O\' Ham</string>
+    <string name="watermelon">Watermelon</string>
+    <string name="salsa">Salsa</string>
+    <string name="eggs">Eggs</string>
+    <string name="bread">Bread</string>
+    <string name="cheese">Cheese</string>
+    <string name="turkey">Turkey</string>
+    <string name="milk">Milk</string>
+    <string name="chips">Chips</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="yogurt">Yogurt</string>
+    <string name="beans">Beans</string>
+</resources>
