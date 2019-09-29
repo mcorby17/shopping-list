@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -27,21 +28,34 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout mMainListLayout;
 
+    private TextView mFindStoreTextView;
+
+    private final String mGeoPrefix = "geo:0,0?q=";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mMainListLayout = findViewById(R.id.list);
+        mFindStoreTextView = findViewById(R.id.searchStoreText);
 
         // Create the previous list items if they were there
         if (savedInstanceState != null)
         {
             mListItems = savedInstanceState.getStringArrayList(ITEM_LIST);
 
-            for (String itemText : mListItems)
+            try
             {
-                mMainListLayout.addView(createListItem(itemText));
+                for (String itemText : mListItems)
+                {
+                    mMainListLayout.addView(createListItem(itemText));
+                }
+            }
+            catch (Exception e)
+            {
+                Log.e(LOG_TAG, "mListItems was null, cannot loop over it");
+                e.printStackTrace();
             }
         }
     }
@@ -59,7 +73,17 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == ITEM_REQUEST &&
             resultCode == RESULT_OK)
         {
-            String itemDesc = data.getStringExtra(ChooseItem.ITEM_TEXT);
+            String itemDesc = null;
+
+            try
+            {
+                itemDesc = data.getStringExtra(ChooseItem.ITEM_TEXT);
+            }
+            catch (Exception e)
+            {
+                Log.e(LOG_TAG, "Unable to get list item description out of Intent");
+                e.printStackTrace();
+            }
 
             if (itemDesc != null)
             {
@@ -102,5 +126,23 @@ public class MainActivity extends AppCompatActivity {
         textView.setTypeface(Typeface.DEFAULT_BOLD);
 
         return textView;
+    }
+
+    public void findStore(View view) {
+
+        // Get text out of textView
+        String text = mFindStoreTextView.getText().toString();
+        String uriText = mGeoPrefix + text;
+
+        // Make geo URI
+        Uri uri = Uri.parse(uriText);
+
+        // Create new implicit intent
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+        if (intent.resolveActivity(getPackageManager()) != null)
+        {
+            startActivity(intent);
+        }
     }
 }

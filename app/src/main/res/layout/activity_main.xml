@@ -7,9 +7,12 @@
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/goToListButton"
+        app:layout_constraintBottom_toTopOf="@+id/searchStoreBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -26,9 +29,30 @@
         android:id="@+id/goToListButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="getListItem"
         android:text="@string/main_list_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/searchStoreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_store_btn_text"
+        android:onClick="findStore"
+        app:layout_constraintBottom_toTopOf="@+id/goToListButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/searchStoreText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/find_store_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/goToListButton"
+        app:layout_constraintEnd_toStartOf="@+id/searchStoreBtn"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="getListItem"/>
+        android:importantForAutofill="no" />
 </androidx.constraintlayout.widget.ConstraintLayout>

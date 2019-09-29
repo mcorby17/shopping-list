@@ -16,4 +16,6 @@
     <string name="peanuts">Peanuts</string>
     <string name="yogurt">Yogurt</string>
     <string name="beans">Beans</string>
+    <string name="find_store_btn_text">Find Store</string>
+    <string name="find_store_hint">Enter Store Name</string>
 </resources>
